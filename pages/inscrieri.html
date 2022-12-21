@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWD LTMC</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Acasă</a>
+            <a href="inscrieri.html">Înscrieri</a>
+            <a href="materiale.html">Materiale</a>
+        </nav>
+
+
+    </header>
+
+    <main>
+        <section id="inscrieri">
+            <div class="tint">
+
+            </div>
+            <div class="section-info">
+                <h1>Înscrie-te la curs!</h1>
+                <h3>Perioada de înregistrare: 05 decembrie - 10 decembrie</h3>
+
+            </div>
+
+        </section>
+        <section>
+            <h1 class="centered">Mai ai câțiva pași</h1>
+            <div class="row">
+                <div class="col-50">
+                    <h2>Completează formularul</h2>
+                    <form id="formular" method="POST" class="formular" action="https://sheetdb.io/api/v1/g7muxpih917jx">
+                        <label for="nume">Nume Prenume</label>
+                        <input type="text" id="nume" name="data[nume]" required>
+
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="data[email]" required>
+
+                        <label for="clasa">Clasa</label> <br>
+
+                        <select name="data[clasa]" id="clasa">
+                            <option>VII</option>
+                            <option>VIII</option>
+                            <option>IX</option>
+                            <option>X</option>
+                            <option>XI</option>
+                            <option>XII</option>
+                        </select>
+
+                        <select name="data[litera]" id="litera">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                        </select>
+
+                        <input id="submit" type="submit" value="Inregistrare">
+
+
+                    </form>
+
+                </div>
+
+                <div class="col-50">
+                    <h2>Profesorul cursului:</h2>
+                    <div class="profesor">
+
+                        <div class="kind"> 
+                            <img src="../images/eo.jpg" alt="">
+                            <p>
+                                IT este domeniul care face parte din viata noastra.
+                                Cel mai important este sa invatam cum sa gestionam aceasta invazie a IT-ului.
+                                Pentru aceasta este nevoie sa incepem sa studiem fiecare pas al acestui domeniu.
+                                Acum poti face asta! Urmeaza cursul!
+                            </p>
+                        </div>
+                        
+                        
+                        <b>Specialitatea:</b> <span>Limbi straine, PWD</span> 
+                        <br>
+                        <b>Email:</b> <a href="mailto:sakuratako30@gmail.com">sakuratako30@gmail.com</a> 
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div>
+                <h2 class="centered">Ai o întrebare ?</h2>
+
+                <div class="fb-comments" data-order-by="reverse_time" data-numposts="5" data-width="100%" data-href="http://127.0.0.1:5500/pages/inscrieri.html">
+
+                </div>
+
+                <div> 
+                    <div class="fb-comments" data-order-by="reverse_time" data-numposts="5" data-width="100%" data-href="http://tekwill.online/procopii-tatiana">
+
+                </div>
+            </div>
+
+
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+    <footer>
+        <h3>©️ Procopii Tatiana LTMC
+        </h3>
+
+
+    </footer>
+
+
+    <script>
+        var form = document.getElementById('formular');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("formular")),
+            }).then(() => {
+                alert("Multumesc !");
+                form.reset();
+            });
+        });
+
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+    </script>
+
+
+</body>
+
+</html>
